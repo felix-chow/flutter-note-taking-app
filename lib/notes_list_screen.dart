@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'add_note_screen.dart';
 
 class NotesListScreen extends StatefulWidget {
+  const NotesListScreen({super.key});
+
   @override
-  _NotesListScreenState createState() => _NotesListScreenState();
+  NotesListScreenState createState() => NotesListScreenState();
 }
 
-class _NotesListScreenState extends State<NotesListScreen> {
-  List<String> _notes = [];
+class NotesListScreenState extends State<NotesListScreen> {
+  final List<String> _notes = [];
 
   void _addOrUpdateNote({
     required String note,
@@ -34,10 +36,10 @@ class _NotesListScreenState extends State<NotesListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Notes'),
+        title: const Text('Notes'),
       ),
       body: _notes.isEmpty
-          ? Center(child: Text('No notes yet!'))
+          ? const Center(child: Text('No notes yet!'))
           : ListView.builder(
               itemCount: _notes.length,
               itemBuilder: (context, index) {
@@ -58,7 +60,7 @@ class _NotesListScreenState extends State<NotesListScreen> {
                     }
                   },
                   trailing: IconButton(
-                    icon: Icon(Icons.delete),
+                    icon: const Icon(Icons.delete),
                     onPressed: () {
                       _deleteNote(
                         index: index,
@@ -80,7 +82,7 @@ class _NotesListScreenState extends State<NotesListScreen> {
             );
           }
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
