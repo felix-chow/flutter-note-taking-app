@@ -16,7 +16,7 @@ class NoteTakingApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: NotesListScreen(),
+      home: const NotesListScreen(),
     );
   }
 }
