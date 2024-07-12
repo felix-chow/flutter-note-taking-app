@@ -15,7 +15,7 @@ This project is a note-taking application that allows users to create, read, upd
 
 ## Screenshots
 
-*Include some screenshots of your app here to give users a visual overview.*
+*Screenshots coming soon.*
 
 ## Getting Started
 
